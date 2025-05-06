@@ -17,7 +17,7 @@ def index():
         return f"Błąd pobierania danych", 500
 
     template = """
-    ELO: {{ dane['elo'] }}, LVL: {{ dane['lvl'] }}, Today: {{ dane['telo'] }}, W: {{ dane['tw'] }}, L: {{ dane['tl'] }}, Last matches: {{ dane['lg'] }}
+    ELO: {{ dane['elo'] }} ({{ dane['telo'] }}), LVL: {{ dane['lvl'] }}, W: {{ dane['tw'] }}, L: {{ dane['tl'] }}, Mecze: {{ dane['lg'] }}
     """
     return render_template_string(template, dane=dane)
 
